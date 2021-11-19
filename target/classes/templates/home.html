@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <form action="#" class="form-signin" th:action="@{/users/{id}(id=${userId})}" th:object="${userData}" method="post">
+        <div sec:authorize="isAuthenticated()">
+            <h2 class="form-signin-heading">Welcome, <span sec:authentication="name">!</span></h2>
+            <div th:if="${param.success}">
+                <div class="alert alert-info">
+                    User details updated!
+                </div>
+            </div>
+            <label for="id" class="sr-only">UserId</label>
+            User Id
+            <input readonly autocomplete='off' type="text" id="id" class="form-control" th:value="${userId}" th:name="userId">
+            <label for="userName" class="sr-only">userName</label>
+            Username
+            <input readonly autocomplete='off' id="userName" type="text" class="form-control" th:value="${userName}" th:name="userName">
+            <label for="name" class="sr-only">name</label>
+            Name
+            <input type="text" class="form-control" id="name" th:value="${name}" th:name="name">
+            <label for="email" class="sr-only">email</label>
+            Email
+            <input type="text" class="form-control" id="email" th:value="${email}" th:name="email">
+            <label for="phone" class="sr-only">phone</label>
+            Phone
+            <input type="text" class="form-control" id="phone" th:value="${phone}" th:name="phone">
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+            <b><a style="color:red;" th:href="@{/logout}">Logout</a></b>
+            <br>
+        </div>
+    </form>
+</div>
+</body></html>

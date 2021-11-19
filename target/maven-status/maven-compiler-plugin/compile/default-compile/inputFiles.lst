@@ -1,0 +1,10 @@
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\service\UserService.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\domain\UserData.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\config\WebSecurityConfig.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\ws\controllers\LoginController.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\ws\controllers\RegistrationController.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\ws\persistence\repositories\UserRepository.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\SecureLoginApplication.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\domain\UserAlreadyExistsException.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\ws\controllers\UserAccountController.java
+C:\Users\Brandon\IdeaProjects\Bitbuy Java Test\src\main\java\com\bitbuy\test\ws\persistence\entities\UserEntity.java

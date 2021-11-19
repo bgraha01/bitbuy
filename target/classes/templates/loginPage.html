@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/login}" class="form-signin" method="post">
+        <h2 class="form-signin-heading">Please login</h2>
+        <div th:if="${errorMessage != null}">
+            <div class="alert alert-danger">
+                <div th:text="${errorMessage}"></div>
+            </div>
+        </div>
+        <div th:if="${logoutMessage != null}">
+            <div class="alert alert-danger">
+                <div th:text="${logoutMessage}"></div>
+            </div>
+        </div>
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <b><a th:href="@{/register}">Register</a></b> new account.
+    </form>
+</div>
+</body></html>

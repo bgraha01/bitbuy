@@ -1,0 +1,10 @@
+com\bitbuy\test\ws\persistence\entities\UserEntity.class
+com\bitbuy\test\service\UserService.class
+com\bitbuy\test\ws\controllers\UserAccountController.class
+com\bitbuy\test\SecureLoginApplication.class
+com\bitbuy\test\ws\persistence\repositories\UserRepository.class
+com\bitbuy\test\ws\controllers\RegistrationController.class
+com\bitbuy\test\config\WebSecurityConfig.class
+com\bitbuy\test\domain\UserData.class
+com\bitbuy\test\domain\UserAlreadyExistsException.class
+com\bitbuy\test\ws\controllers\LoginController.class

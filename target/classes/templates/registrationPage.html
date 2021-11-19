@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Please sign in</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+    <form action="#" class="form-signin" th:action="@{/register}" th:object="${userData}" method="post">
+        <h2 class="form-signin-heading">Please register</h2>
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+            <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>
+        </div>
+        <div th:if="${param.success}">
+            <div class="alert alert-info">
+                You have successfully registered!
+            </div>
+        </div>
+        <label for="userName" class="sr-only">Username</label>
+        <input type="text" id="userName" th:field="*{userName}" class="form-control" placeholder="Username" required autofocus>
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" th:field="*{password}" class="form-control" placeholder="Password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        Already have an account? <b><a th:href="@{/login}">Login.</a></b>
+    </form>
+</div>
+</body></html>
